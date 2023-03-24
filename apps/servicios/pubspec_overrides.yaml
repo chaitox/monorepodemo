@@ -1,0 +1,4 @@
+# melos_managed_dependency_overrides: gms
+dependency_overrides:
+  gms:
+    path: ..\\..\\packages\\gms
