@@ -1,10 +1,10 @@
+import 'package:cloud_services/crashlitycs_repository.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/widgets.dart';
-import 'package:gms/gms.dart';
 
-class DemoImpl implements Demo {
+class CrashlitycsRepositoryImpl implements CrashlitycsRepository {
   @override
   Future<void> setUp({FirebaseOptions? options}) async {
     await Firebase.initializeApp(options: options);
@@ -34,7 +34,7 @@ class DemoImpl implements Demo {
 }
 
 class CrashlyticsFactory {
-  static Demo create() {
-    return DemoImpl();
+  static CrashlitycsRepository create() {
+    return CrashlitycsRepositoryImpl();
   }
 }

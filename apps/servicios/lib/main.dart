@@ -1,16 +1,16 @@
 import 'dart:async';
 import 'dart:isolate';
 
+import 'package:cloud_services/cloud_services.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:gms/gms.dart';
 import 'package:servicios/firebase_options.dart';
 import 'package:servicios/injector.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await setUpDependencies();
-  final crashlyticsRepository = getIt<Demo>();
+  final crashlyticsRepository = getIt<CrashlitycsRepository>();
   await crashlyticsRepository.setUp(
       options: DefaultFirebaseOptions.currentPlatform);
   try {

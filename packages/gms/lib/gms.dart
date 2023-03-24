@@ -1,2 +1,1 @@
-export 'src/demo.dart';
-export 'src/demo_impl.dart';
+export 'src/crashlitics/crashlytics_repository_impl.dart';
