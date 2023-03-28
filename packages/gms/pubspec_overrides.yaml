@@ -1,4 +1,0 @@
-# melos_managed_dependency_overrides: cloud_services
-dependency_overrides:
-  cloud_services:
-    path: ..\\cloud_services

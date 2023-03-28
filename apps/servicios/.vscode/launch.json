@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "huawei",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.dart",
+            "args": [
+                "--no-sound-null-safety"
+            ],
+        },
+        {
+            "name": "google",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.dart",
+            "args": [],
+        }
+    ]
+}

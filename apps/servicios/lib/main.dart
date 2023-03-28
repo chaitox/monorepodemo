@@ -4,15 +4,14 @@ import 'dart:isolate';
 import 'package:cloud_services/cloud_services.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:servicios/firebase_options.dart';
 import 'package:servicios/injector.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await setUpDependencies();
+
   final crashlyticsRepository = getIt<CrashlitycsRepository>();
-  await crashlyticsRepository.setUp(
-      options: DefaultFirebaseOptions.currentPlatform);
+  await crashlyticsRepository.setUp();
   try {
     await runZonedGuarded<Future<void>>(
       () async => runApp(const MyApp()),
@@ -55,7 +54,7 @@ class MyApp extends StatelessWidget {
         body: Center(
             child: ElevatedButton(
                 onPressed: () {
-                  throw Exception('Error!');
+                  throw Exception('Errores de errores!');
                 },
                 child: const Text('lanzar error'))),
       ),

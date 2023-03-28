@@ -1,20 +1,19 @@
 name: cms
 description: A new Flutter package project.
 version: 0.0.1
-publish_to: none
+publish_to: "none"
 
 environment:
   sdk: ">=2.18.6 <3.0.0"
   flutter: ">=1.17.0"
 
 dependencies:
-  firebase_analytics: ^10.1.6
-  firebase_crashlytics: ^3.0.17
-  flutter:
-    sdk: flutter
+  agconnect_core: ^1.6.0+300
+  agconnect_crash_plus: ^3.0.1
   cloud_services:
     path: ../../packages/cloud_services
-
+  flutter:
+    sdk: flutter
 dev_dependencies:
   flutter_lints: ^2.0.0
   flutter_test:

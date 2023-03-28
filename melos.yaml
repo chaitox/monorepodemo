@@ -2,9 +2,21 @@
 name: counter
 
 # A list of paths to local packages that are included in the Melos workspace. Each entry can be a specific path or a glob pattern.
+
+# Cuando se va generar para google o huawei en el melos.yaml se debe poner el path del paquete
+#que se va utilizar, ambos paquetes no pueden estar activos al mismo tiempo ya que generara el siguiente
+##error:
+##melos.yaml: Multiple packages with the name `cms` found in the workspace, which is unsupported.
+##To fix this problem, consider renaming your packages to have a unique name.
+
+##The packages that caused the problem are:
+##- cms at packages/gms
+##- cms at packages/hms
+
 packages:
   - "apps/*"
-  - "packages/**"
+  - "packages/gms"
+  #- "packages/hms"
 
 # Recommended option for projects with Dart 2.17.0 or greater.
 #
